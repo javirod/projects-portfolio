@@ -20,8 +20,9 @@ html {
    position: fixed;
    height: 7vh;
    top: 5vh;
-   left: 6vw;
+   left: 4vw;
 }
+
 .bg-img2 {
    opacity: 0;
 }
@@ -45,8 +46,6 @@ nav {
    justify-content: space-around;
    align-items: center;
    height: 17vh;
-   margin-left: 3em;
-
 }
 
 .nav-links {
