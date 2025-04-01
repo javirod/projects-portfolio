@@ -191,11 +191,13 @@ section {
 .section__text__p2 {
    font-size: 1.75rem;
    margin-bottom: 1rem;
+   overflow: hidden;
 }
 
 .title {
    font-size: 3rem;
    text-align: center;
+   overflow: hidden;
 }
 
 #socials-container {
@@ -204,6 +206,38 @@ section {
    margin-top: 1rem;
    gap: 1rem;
    height: 2rem;
+}
+
+.title > span, .section__text__p2 > span {
+   display: block;
+   animation: 1s ease-in-out slideUp;
+}
+
+.title > span {
+   animation-delay: 0s;
+   animation-fill-mode: forwards;
+}
+
+.section__text__p2 > span {
+   animation-delay: 0.25s;
+   animation-fill-mode: both;
+}
+
+@keyframes slideUp {
+   0% {
+      transform: translateY(100%);
+      opacity: 0;
+   }
+   /* 50% {
+      transform: translateY(50%);
+      opacity: 0.5;
+   } */
+      
+   100% {
+      transform: translateY(0);
+      opacity: 1;
+      
+   }
 }
 
 /* Icons */
@@ -303,6 +337,22 @@ section {
 
 .icon {
    height: 32px;
+}
+
+@media (prefers-reduced-motion: no-preference){
+   .about-pic {
+      scale: 0.8;
+      opacity: 0.2;
+      animation: fade-in linear;
+      animation-timeline: view();
+      animation-range-start: cover;
+      animation-range-end: 50vh;
+      animation-fill-mode: forwards;
+   }
+
+   @keyframes fade-in {
+      to {scale: 100%; opacity: 100%;};
+   }
 }
 
 /* Experience Section */
