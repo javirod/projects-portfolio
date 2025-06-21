@@ -175,7 +175,7 @@ section {
    margin: auto 0;
 }
 
-.profile_pic {
+.profile-pic {
    border-radius: 50%;
 }
 
@@ -315,7 +315,7 @@ section {
 }
 
 .about-pic {
-   border-radius: 2rem;
+   border-radius: 50%;
 }
 
 .arrow {
